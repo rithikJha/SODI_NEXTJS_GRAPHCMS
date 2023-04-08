@@ -1,0 +1,66 @@
+.author-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.author-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  background-color: rgba(158, 158, 158, 0.247);
+  border-radius: 25px;
+  box-shadow: 0 14px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 2px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.author-name {
+  font-size: 1.8rem;
+  margin-top: 45px;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.author-bio {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-top: 15px;
+  color: rgb(169, 169, 169);
+}
+
+@media (prefers-color-scheme: dark) {
+  .author-bio {
+    color: rgb(193, 193, 193);
+  }
+  .author-name {
+    color: aliceblue;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .author-bio {
+    color: rgb(93, 93, 93);
+  }
+  .author-name {
+    color: rgb(54, 54, 54);
+  }
+}

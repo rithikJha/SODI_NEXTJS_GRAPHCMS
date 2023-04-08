@@ -1,0 +1,154 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: transform 0.3s ease-in-out, scroll-snap-type 0.3s ease-in-out;
+  margin-right: 22px;
+  margin-left: 22px;
+}
+
+.carousel-content {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-content.scroll {
+  transform: translateX(-100%);
+}
+
+.carousel-card {
+  flex: 0 0 calc(100% - 20px); /* Display 1 card at a time with some margin */
+  margin-right: 20px;
+  position: relative;
+  min-width: 260px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.391); /* Add box-shadow for a 3D effect */
+  border-radius: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel-card-image {
+  width: 100%;
+
+  height: 15rem; /* Set height as desired */
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: -4px;
+  filter: blur(5px);
+}
+
+.carousel-card-overlay {
+  position: absolute;
+  border-radius: 15px;
+  height: 15rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.527); /* Black overlay */
+  padding: 45px;
+  opacity: 0.8; /* Adjust opacity as desired */
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-card-overlay:hover {
+  opacity: 1; /* Change opacity to 1 on hover */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Change background color to a darker shade on hover */
+  transform: scale(1.1); /* Magnify the card overlay on hover */
+}
+
+.carousel-card-title {
+  margin: 0;
+  color: #ffffff; /* Text color for title */
+  font-size: 18px; /* Font size for title */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.carousel-card-author {
+  margin: 10px 0px 0px 0px;
+  color: #cdcdcd; /* Text color for author */
+  font-size: 14px; /* Font size for author */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000073;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-button.left {
+  left: 16px;
+}
+
+.carousel-button.right {
+  right: 16px;
+}
+
+.carousel-button i {
+  font-size: 24px;
+}
+
+.carousel-button:hover {
+  color: #bf8560;
+  background-color: #e0e0e0;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(100% / 6); /* Update to match the number of articlesPerSlide */
+  padding: 0 8px; /* Add some padding between slides */
+}
+
+@media screen and (min-width: 518px) {
+  /* On screens with width 768px and above, display 2 cards at a time */
+  .carousel-card {
+    flex: 0 0 calc(60% - 20px); /* Display 2 cards at a time with some margin */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* On screens with width 768px and above, display 2 cards at a time */
+  .carousel-card {
+    flex: 0 0 calc(50% - 20px); /* Display 2 cards at a time with some margin */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* On screens with width 1024px and above, display 3 cards at a time */
+  .carousel-card {
+    flex: 0 0 calc(33.33% - 20px); /* Display 3 cards at a time with some margin */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* On screens with width 1200px and above, display 4 cards at a time */
+  .carousel-card {
+    flex: 0 0 calc(25% - 20px); /* Display 4 cards at a time with some margin */
+  }
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");

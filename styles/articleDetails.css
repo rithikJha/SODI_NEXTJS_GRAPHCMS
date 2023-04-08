@@ -1,0 +1,488 @@
+.full-article-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.full-article-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.full-article-image {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  filter: grayscale(40%);
+  transition: all 0.3s ease-in-out;
+}
+.full-article-image:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.full-article-category {
+  background-color: #424141;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  text-transform: uppercase;
+  margin-right: 8px;
+  margin-top: 8px;
+  color: rgb(241, 241, 241);
+}
+
+.full-article-content {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+  overflow: auto;
+  display: block;
+}
+.full-article-content img {
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+/*
+  .full-article-content iframe{
+    object-fit:cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32rem;
+    height: 18rem;
+    max-width: 100%;
+  }*/
+
+/* Dark background color */
+pre,
+code {
+  background-color: #1e1e1e;
+  color: #f8f8f8; /* Text color */
+  padding: 10px;
+  font-family: "Courier", monospace; /* Monospaced font */
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+/* Syntax highlighting styles */
+pre code {
+  display: block;
+  overflow-x: auto;
+  /* Add syntax highlighting styles here */
+}
+
+/* Optional: Customize colors for different code elements */
+pre code .keyword {
+  color: #d6a82a; /* Example color for keywords */
+}
+
+pre code .string {
+  color: #a6c92a; /* Example color for strings */
+}
+
+pre code .comment {
+  color: #808080; /* Example color for comments */
+  font-style: italic;
+}
+
+/* Dark background color */
+table {
+  background-color: #222;
+  color: #f8f8f8; /* Text color */
+  width: 100%;
+  border-collapse: collapse; /* Remove spacing between table cells */
+  border: none; /* Remove default table border */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Add box shadow for a modern look */
+  font-family: Arial, sans-serif; /* Update font family for a clean and modern look */
+  table-layout: fixed; /* Fix table layout */
+}
+
+/* Table header styles */
+th {
+  background-color: #333; /* Header background color */
+  color: #f8f8f8; /* Header text color */
+  padding: 10px;
+  text-align: left;
+  border: none; /* Remove default header border */
+  font-weight: bold; /* Add bold font weight for header cells */
+  text-transform: uppercase; /* Convert header text to uppercase */
+  letter-spacing: 1px; /* Add letter spacing for a modern look */
+  cursor: pointer; /* Add cursor pointer for hover effect */
+  transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Table row styles */
+td {
+  padding: 8px;
+  border-bottom: 1px solid #444; /* Add border between rows */
+  border: none; /* Remove default data cell border */
+  font-size: 14px; /* Adjust font size for data cells */
+  transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+  word-wrap: break-word; /* Add word wrapping for table cells */
+  max-width: 0; /* Prevent table cells from expanding beyond their parent container */
+}
+
+/* Alternating row background color */
+tr:nth-child(even) {
+  background-color: #333;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+  background-color: #444;
+}
+
+/* Add border to table */
+table {
+  border: 1px solid #555;
+  border-radius: 5px; /* Add border radius for a more modern look */
+  overflow: hidden; /* Hide overflow from table */
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Add border to table headers */
+th {
+  border: 1px solid #555;
+}
+
+/* Add border to table data cells */
+td {
+  border: 1px solid #555;
+}
+
+/* Custom bullet style */
+ul {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0px; /* Add left padding for spacing */
+}
+
+ul li {
+  position: relative; /* Add relative positioning for list items */
+  padding-left: 30px; /* Add left padding for bullets */
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+}
+
+ul li::before {
+  content: "\2022"; /* Use a custom bullet character */
+  color: #007bff; /* Set bullet color */
+  font-size: 16px; /* Set bullet size */
+  position: absolute; /* Use absolute positioning for bullets */
+  left: 0; /* Position bullets at the left edge of the list item */
+  top: 0; /* Align bullets with the top of the list item */
+}
+
+/* Custom numbering style */
+ol {
+  list-style-type: none; /* Remove default numbering */
+  counter-reset: custom-counter; /* Reset counter for custom numbering */
+  padding-left: 20px; /* Add left padding for spacing */
+}
+
+ol li {
+  position: relative; /* Add relative positioning for list items */
+  padding-left: 30px; /* Add left padding for numbering */
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+}
+
+ol li::before {
+  counter-increment: custom-counter; /* Increment counter for custom numbering */
+  content: counter(custom-counter); /* Use counter value as content */
+  color: #007bff; /* Set number color */
+  font-size: 16px; /* Set number size */
+  font-weight: bold; /* Add bold font weight for emphasis */
+  position: absolute; /* Use absolute positioning for numbers */
+  left: 0; /* Position numbers at the left edge of the list item */
+  top: 0; /* Align numbers with the top of the list item */
+}
+
+/* Hover effect for list items */
+li:hover {
+  color: #ad6a5e; /* Change text color on hover */
+  /* Add pointer cursor on hover */
+}
+
+/* Add border to list items */
+li {
+  border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+  padding-bottom: 10px; /* Add bottom padding for spacing */
+}
+
+/* Add margin to nested lists */
+ul ul,
+ol ol {
+  margin-left: 20px; /* Add left margin for nested lists */
+}
+
+/* Actual iframe */
+iframe {
+  display: block; /* Make iframe a block element */
+  max-width: 100%; /* Set maximum width to 100% for responsiveness */
+  max-height: 100%;
+  border: none; /* Remove default iframe border */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+  border: 0px solid #858585; /* Add border to iframe */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.298); /* Add box shadow for depth effect */
+  overflow: hidden; /* Hide overflowing content */
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 0px;
+}
+
+/* Add hover effect on iframe */
+iframe:hover {
+  opacity: 0.9; /* Reduce opacity on hover for a visual effect */
+}
+
+@media screen and (max-width: 767px) {
+  .full-article-container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .full-article-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .full-article-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    display: block;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .full-article-category {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .full-article-content {
+    font-size: 1rem;
+  }
+  .feature-area {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 20px;
+    align-items: center;
+  }
+  .article-widget {
+    margin-top: 3%;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+  .article-categories {
+    margin-top: 3%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .full-article-container {
+    padding: 20px;
+    width: 90%;
+  }
+  .article-area {
+    width: 65%;
+    margin-left: 60px;
+    margin-top: 1.7rem;
+  }
+  .feature-area {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .details-page {
+    display: flex;
+  }
+  .article-widget .article-categories {
+    position: absolute; /* set both divs to absolute position */
+    width: 100%; /* set both divs to 100% width */
+  }
+  .article-widget {
+    margin-bottom: 25px;
+    height: 400px;
+    margin-top: 0px;
+  }
+
+  .article-categories {
+    height: 400px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light background color */
+  table {
+    background-color: #f8f8f8;
+    color: #333; /* Text color */
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between table cells */
+    border: none; /* Remove default table border */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow for a modern look */
+    font-family: Arial, sans-serif; /* Update font family for a clean and modern look */
+    table-layout: fixed; /* Fix table layout */
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  /* Table header styles */
+  th {
+    background-color: #ddd; /* Header background color */
+    color: #333; /* Header text color */
+    padding: 10px;
+    text-align: left;
+    border: none; /* Remove default header border */
+    font-weight: bold; /* Add bold font weight for header cells */
+    text-transform: uppercase; /* Convert header text to uppercase */
+    letter-spacing: 1px; /* Add letter spacing for a modern look */
+    cursor: pointer; /* Add cursor pointer for hover effect */
+    transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+  }
+
+  /* Table row styles */
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #eee; /* Add border between rows */
+    border: none; /* Remove default data cell border */
+    font-size: 14px; /* Adjust font size for data cells */
+    transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+    word-wrap: break-word; /* Add word wrapping for table cells */
+    max-width: 0; /* Prevent table cells from expanding beyond their parent container */
+  }
+
+  /* Alternating row background color */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  /* Hover effect on table rows */
+  tr:hover {
+    background-color: #e1e1e1;
+  }
+
+  /* Add border to table */
+  table {
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Add border radius for a more modern look */
+    overflow: hidden; /* Hide overflow from table */
+  }
+
+  /* Add border to table headers */
+  th {
+    border: 1px solid #ccc;
+  }
+
+  /* Add border to table data cells */
+  td {
+    border: 1px solid #ccc;
+  }
+}
+
+
+/* Text formatting styles */
+.full-article-content p {
+  margin: 1em 0 1em;
+  color: #ffffff;
+}
+
+.full-article-content strong {
+  font-weight: bold;
+}
+
+.full-article-content em {
+  font-style: italic;
+}
+
+.full-article-content u {
+  text-decoration: underline;
+}
+
+/* Link styles */
+.full-article-content a {
+  color: #cf5176;
+  text-decoration: none;
+}
+
+.full-article-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* Blockquote styles */
+.full-article-content blockquote {
+  margin: 0;
+  padding: 1em;
+  font-style: italic;
+  border-left: 2px solid #cf5176;
+}
+
+/* Heading styles */
+.full-article-content h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.full-article-content h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #e6e6e6;
+}
+
+.full-article-content h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d1d1d1;
+}
+
+
+@media (prefers-color-scheme: light){
+  .full-article-content p {
+    color: #000000;
+  }
+  .full-article-content a {
+    color: #c5522f;
+    text-decoration: none;
+  }
+  .full-article-content h1 {
+    color: #000000;
+  }
+  
+  .full-article-content h2 {
+    color: #404040;
+  }
+  
+  .full-article-content h3 {
+    color: #5f5f5f;
+  }
+  .full-article-content blockquote {
+    border-left: 2px solid #c5522f;
+  }
+}

@@ -1,0 +1,132 @@
+.widget-card {
+  background-color: #1c1c1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin: 0.4rem;
+  max-width: 100%;
+  min-width: 90%;
+  max-height: 100%;
+  min-height: 330px;
+  transition: all 0.3s ease;
+  overflow: auto;
+  padding: 0px;
+}
+
+.widget-card:hover {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.widget-card-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.widget-card-header h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+}
+
+.widget-post-list {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+.widget-post-list .nthArticle {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  word-wrap: normal;
+}
+
+.widget-post-list img {
+  width: 95px;
+  height: 65px;
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+.widget-post-list .nthArticle .article-date-title {
+  font-weight: 500;
+  color: #fff;
+}
+
+.widget-post-list .nthArticle .date {
+  font-size: 0.6rem;
+  color: #999;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.widget-post-list .nthArticle p {
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 1.4;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.widget-post-list .nthArticle:hover .article-date-title p {
+  color: #ff7fb9;
+}
+/* WebKit */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #1c1c1e;
+  border-radius: 5px 5px 5px 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dedede74;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+@media (prefers-color-scheme: light) {
+  .widget-card {
+    background-color: #ffffff;
+  }
+  .widget-card-header {
+    border-bottom: 1px solid #6a6a6a;
+  }
+  .widget-card-header h3 {
+    color: #333333;
+  }
+  .widget-post-list .nthArticle .date {
+    color: #444444;
+  }
+
+  .widget-post-list .nthArticle p {
+    color: #1c1c1c;
+  }
+  .widget-post-list .nthArticle:hover .article-date-title p {
+    color: #009688;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: #ffffff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #9b9b9b74;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #656565;
+  }
+}
